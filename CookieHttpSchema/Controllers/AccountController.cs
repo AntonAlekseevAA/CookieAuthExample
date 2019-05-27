@@ -13,7 +13,7 @@ namespace CookieHttpSchema.Controllers
         [Authorize]
         public IActionResult Index()
         {
-            var user = HttpContext.User;
+            var loginSuccess = HttpContext.User.Identity.IsAuthenticated;
             return View();
         }
 
