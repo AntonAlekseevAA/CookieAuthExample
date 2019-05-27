@@ -10,6 +10,7 @@ namespace CookieHttpSchema.Controllers
 {
     public class AccountController : Controller
     {
+        /* Маршрут, доступный только после успешного логина */
         [Authorize]
         public IActionResult Index()
         {
